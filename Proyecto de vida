@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto de Vida</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+scroll-behavior: smooth;
+}
+
+p{
+	text-align: justify;
+	
+	fonta-size: 30px;
+}
+
+h1{
+	columns-span:2;
+}
+
+h4{
+	font-size:95px;
+}
+
+.section {
+opacity: 0;
+height: 0;
+overflow: hidden;
+transition: opacity 0.5s ease;
+}
+.section.active {
+opacity: 1;
+height: auto;
+overflow: visible;
+}
+.nav-item {
+position: relative;
+}
+.nav-item::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #3b82f6;
+transition: width 0.3s ease;
+}
+.nav-item.active::after {
+width: 100%;
+}
+.timeline-item {
+position: relative;
+padding-left: 28px;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+left: 0;
+top: 6px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #3b82f6;
+}
+.timeline-item::after {
+content: '';
+position: absolute;
+left: 5px;
+top: 22px;
+width: 2px;
+height: calc(100% - 16px);
+background-color: #e5e7eb;
+}
+.timeline-item:last-child::after {
+display: none;
+}
+</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+<header class="bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="font-['Pacifico'] text-2xl text-primary"><img src="https://st.mextudia.com/wp-content/uploads/2020/03/que-es-proyecto-de-vida-de-un-estudiante.jpg" width="150" height="100"></div>
+<nav class="hidden md:flex space-x-8">
+<button class="nav-item active text-gray-800 hover:text-primary transition-colors font-medium" data-section="inicio">Vision Y Mision</button>
+<button class="nav-item text-gray-800 hover:text-primary transition-colors font-medium" data-section="mision">Objetivo y Areas</button>
+<button class="nav-item text-gray-800 hover:text-primary transition-colors font-medium" data-section="objetivos">Metas y Aspectos</button>
+<button class="nav-item text-gray-800 hover:text-primary transition-colors font-medium" data-section="desarrollo">Principios y Estrategias</button>
+<button class="nav-item text-gray-800 hover:text-primary transition-colors font-medium" data-section="metas">Crogronograma</button>
+</nav>
+<button class="md:hidden flex items-center justify-center w-10 h-10" id="menu-toggle">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+<div class="mobile-menu hidden md:hidden px-4 py-2 bg-white border-t border-gray-100" id="mobile-menu">
+<div class="flex flex-col space-y-3 py-2">
+<button class="text-left px-2 py-1 text-gray-800 hover:text-primary transition-colors font-medium mobile-nav-item active" data-section="inicio">Inicio</button>
+<button class="text-left px-2 py-1 text-gray-800 hover:text-primary transition-colors font-medium mobile-nav-item" data-section="mision">Misión y Visión</button>
+<button class="text-left px-2 py-1 text-gray-800 hover:text-primary transition-colors font-medium mobile-nav-item" data-section="objetivos">Objetivos</button>
+<button class="text-left px-2 py-1 text-gray-800 hover:text-primary transition-colors font-medium mobile-nav-item" data-section="desarrollo">Desarrollo Personal</button>
+<button class="text-left px-2 py-1 text-gray-800 hover:text-primary transition-colors font-medium mobile-nav-item" data-section="metas">Metas Profesionales</button>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 py-8 md:py-12">
+<!-- Inicio -->
+<section id="inicio" class="section active">
+<div class="grid grid-cols-5 md:grid-cols-1 gap-20 items-center">
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+  <!-- Columna de texto -->
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Visión</h1>
+      <p class="text-lg text-gray-700">
+        Convertirme en Ingeniero en Sistemas, alcanzando un alto nivel de conocimiento, estabilidad económica y crecimiento personal. Aspiro a desarrollar mis propios proyectos, perfeccionar mis habilidades en programación y explorar profundamente las distintas áreas tecnológicas y sistemáticas que abarca mi carrera. Deseo mejorar mi manera de pensar, ampliar mi visión del mundo y elevar mi calidad de vida, experimentando nuevas formas de comprender y aplicar la tecnología en un entorno global en constante evolución. .
+      </p>
+    </div>
+
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Misión</h1>
+      <p class="text-lg text-gray-700">
+        Desarrollarme integralmente como Ingeniero en Sistemas, cultivando la disciplina, el pensamiento crítico y el compromiso con el aprendizaje continuo. Esforzandome por adquirir y aplicar conocimientos tecnológicos de manera ética y creativa, impulsando proyectos propios que generen un impacto positivo. Teniendo como proposito mejorar mi calidad de vida, fortalecer mis habilidades personales y profesionales, y mantener una mentalidad abierta que me permita adaptarme e innovar en un mundo tecnológico en constante transformación.
+      </p>
+    </div>
+<br><br><br>
+    <div class="bg-white rounded-lg shadow-sm p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Principios</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Integridad -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-shield-check-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Respeto</h3>
+            <p class="text-sm text-gray-600">        Reconocer el valor de cada persona, sus ideas y diferencias, promoviendo relaciones sanas basadas en la tolerancia y la cortesía.</p>
+          </div>
+        </div>
+        <!-- Empatía -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-heart-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Responsabilidad</h3>
+            <p class="text-sm text-gray-600">                   Cumplir con los deberes y compromisos de forma puntual y consciente, asumiendo las consecuencias de las decisiones tomadas.
+.</p>
+          </div>
+        </div>
+        <!-- Excelencia -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-award-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Innovacion</h3>
+            <p class="text-sm text-gray-600">        Aplicar la creatividad y el pensamiento crítico para proponer soluciones nuevas que mejoren procesos, recursos y resultados.</p>
+          </div>
+        </div>
+        <!-- Colaboración -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-team-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Autoconocimeinto</h3>
+            <p class="text-sm text-gray-600">        Reconocer fortalezas, debilidades, emociones y motivaciones propias para desarrollarse de manera equilibrada y consciente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <button class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors">
+      Conocer más
+    </button>
+  </div>
+
+  <!-- Columna de imágenes -->
+  <div class="flex flex-col items-center space-y-6">
+    <div class="relative w-80 h-64 rounded-lg overflow-hidden border-4 border-white shadow-lg">
+      <img src="https://cdn-icons-png.freepik.com/512/2985/2985863.png" alt="Imagen 1" class="w-full h-full object-cover">
+    </div>
+    <br><br>
+    <div class="relative w-80 h-64 rounded-lg overflow-hidden border-4 border-white shadow-lg">
+      <img src="https://cdn-icons-png.freepik.com/512/4898/4898740.png" alt="Imagen 2" class="w-full h-full object-cover">
+    </div>
+
+<br><br>
+<div class="bg-white rounded-lg shadow-sm p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Valores Personales</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Integridad -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-shield-check-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Honestidad</h3>
+            <p class="text-sm text-gray-600">        Actuar con sinceridad, transparencia y coherencia, respetando la verdad en cada acción y palabra.</p>
+          </div>
+        </div>
+        <!-- Empatía -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-heart-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Compromiso</h3>
+            <p class="text-sm text-gray-600">Manterme firme en las decisiones que tome y ser constante en seguir todo lo que me proponga junto a mis metas.</p>
+          </div>
+        </div>
+        <!-- Excelencia -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-award-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Empatia/h3>
+            <p class="text-sm text-gray-600">        Comprender y conectar con los sentimientos y realidades de otras personas, fortaleciendo relaciones basadas en la sensibilidad y la solidaridad.</p>
+          </div>
+        </div>
+        <!-- Colaboración -->
+        <div class="flex items-start">
+          <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+            <i class="ri-team-line text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800">Perseverancia</h3>
+            <p class="text-sm text-gray-600">        Mantener el esfuerzo constante ante los retos y dificultades, con la determinación de alcanzar los objetivos propuestos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+</section>
+<!-- Misión y Visión -->
+<section id="mision" class="section">
+<div class="max-w-3xl mx-auto">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Objetivo de mi vision</h1>
+<div class="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-primary">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<
+</div>
+<p class="text-gray-700">Desarrollar al máximo mis capacidades en el ámbito tecnológico para ampliar mis conocimientos, asumir nuevos retos y consolidar una trayectoria profesional sólida. Buscando generar soluciones innovadoras que aporten valor a la sociedad, mientras mantengo un equilibrio entre mi crecimiento personal, académico y laboral, contribuyendo activamente al avance del entorno tecnológico en constante evolución.</p>
+</div>
+
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+
+ <h1 class="text-3xl md:text-4xl font-bold terxt-gray-900 mb-4">Areas de apoyo para desarrollar mi proyecto</h1>
+</h2>
+<div class="space-y-4">
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-medal-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Sociocultural</h3>
+</div>
+
+</div>
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-building-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Ciudadania</h3>
+</div>
+
+</div>
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-graduation-cap-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Formación Continua</h3>
+</div>
+
+</div>
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-global-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Emocional</h3>
+</div>
+
+</div>
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Fisica / Salud</h3>
+</div>
+
+</div>
+
+
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Financiera</h3>
+</div>
+
+</div>
+
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Intelectual</h3>
+</div>
+
+</div>
+
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Trabajo</h3>
+</div>
+
+</div>
+
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Familiar</h3>
+</div>
+
+</div>
+
+
+<div class="p-3 bg-gray-50 rounded">
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-user-voice-line text-sm text-primary"></i>
+</div>
+<h3 class="font-medium text-gray-800">Espiritual</h3>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<br><br>
+<div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
+<h2 class="text-xl font-semibold mb-3">Mi Filosofía de Vida</h2>
+<p class="italic">"El éxito no se mide por lo que logras, sino por los obstáculos que superas y las personas a las que inspiras en el camino."</p>
+</div>
+</div>
+</section>
+
+
+<!-- Objetivos -->
+<section id="objetivos" class="section">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Metas</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-blue-400">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-timer-line text-xl text-blue-500"></i>
+</div>
+<h2 class="text-xl font-semibold text-gray-800 mb-3">Corto Plazo</h2>
+<p class="text-sm text-gray-500 mb-4"></p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-blue-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-blue-500"></i>
+</div>
+<p class="text-gray-700">Aprobar el 1er semestre</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-blue-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-blue-500"></i>
+</div>
+<p class="text-gray-700">Orgnizar mis finanzas personales y ahorrar</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-blue-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-blue-500"></i>
+</div>
+<p class="text-gray-1500">Establecer rutina de ejercicio 3 veces por semana</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-blue-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-blue-500"></i>
+</div>
+<p class="text-gray-1500">Fortalecer y mejorar mis conocimientos sobre la programacion</p>
+</li>
+</ul>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-indigo-500">
+<div class="w-12 h-12 flex items-center justify-center bg-indigo-100 rounded-full mb-4">
+<i class="ri-calendar-line text-xl text-indigo-500"></i>
+</div>
+<h2 class="text-xl font-semibold text-gray-800 mb-3">Mediano Plazo</h2>
+<p class="text-sm text-gray-500 mb-4"></p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-indigo-500"></i>
+</div>
+<p class="text-gray-700">Asumir un rol de liderazgo en mi área profesional</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-indigo-500"></i>
+</div>
+<p class="text-gray-700">Obtener experiencia profesional en el area tecnologicas</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-indigo-500"></i>
+</div>
+<p class="text-gray-700">Desarrollar practicas profesionales en diversos ambitos en empresas</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-indigo-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-indigo-500"></i>
+</div>
+<p class="text-gray-700">Iniciar con las creaciones de mis propios proyectos </p>
+</li>
+</ul>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-purple-500">
+<div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+<i class="ri-flight-takeoff-line text-xl text-purple-500"></i>
+</div>
+<h2 class="text-xl font-semibold text-gray-800 mb-3">Largo Plazo</h2>
+<p class="text-sm text-gray-500 mb-4"></p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-purple-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-purple-500"></i>
+</div>
+<p class="text-gray-700">Graduarme de la carrera que elegi</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-purple-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-purple-500"></i>
+</div>
+<p class="text-gray-700">Tener un empleo renumerado ganando mas ingresos</p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-purple-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-purple-500"></i>
+</div>
+<p class="text-gray-700">Poder cambiar mi calidad de vida y la de mi familia </p>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center bg-purple-100 rounded-full mr-2 mt-0.5 flex-shrink-0">
+<i class="ri-check-line text-xs text-purple-500"></i>
+</div>
+<p class="text-gray-700">Lograr independencia financiera para dedicarme a proyectos de impacto social</p>
+</li>
+</ul>
+</div>
+</div>
+<br><br>
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Aspectos A considerar</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-primary">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-compass-3-line text-xl text-primary"></i>
+</div>
+<h2 class="text-xl font-semibold text-gray-800 mb-3">Puntos Fuertes</h2>
+<p class="text-gray-700">Poseo conocimiento en el uso y manejo de programas de programacion que hoy en dia son los mas utilizados para diversos proyectos .</p>
+<br>
+<p>Mantenerme enfocado en mis estudios, demostrando disciplina y compromiso a largo plazo.</p>
+<br>
+<p>Buscar siempre aprender más, mejorar mi forma de pensar y expandir mi visión tecnológica, convirtiendome en una persona en evolución constante.</p>
+
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-secondary">
+<div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full mb-4">
+<i class="ri-eye-line text-xl text-secondary"></i>
+</div>
+<h2 class="text-xl font-semibold text-gray-800 mb-3">Puntos debiles u obstaculos</h2>
+<p class="text-gray-700">Falta de experiencia práctica en entornos reales en areas de tecnologia</p>
+<br>
+<p>Dificultades para trabajar bajo presión o con plazos ajustados</p>
+<br>
+<p>Sigo perfeccionando mi capacidad para equilibrar estudios, descanso, vida personal y desarrollo profesional.</p>
+</div>
+</div>
+</section>
+
+
+
+
+<!-- Desarrollo Personal -->
+<section id="desarrollo" class="section">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Principios para alcanzar mis metas</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Corto Plazo
+</h2>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Disciplina</h3>
+<p class="text-gray-600 mb-3"> Mantener una rutina diaria de estudio y organización personal. </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Responsabilidad</h3>
+<p class="text-gray-600 mb-3">Seguir horarios definidos, cumplir tareas y compromisos académicos sin depender de la motivación del momento.
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Perseverancia</h3>
+<p class="text-gray-600 mb-3">Mantener firme ante cualqueir situacion y seguir caminando teniendo precaucion 
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Mediano Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Perseverancia </h3>
+<p class="text-gray-600 mb-3"> Mantener el compromiso con los objetivos profesionales a pesar de los obstáculos, retrasos o fracaso. </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Ambicio</h3>
+<p class="text-gray-600 mb-3">Buscar constantemente nuevas oportunidades para aprender, asumir responsabilidades y destacar en proyectos.
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Autoconocimiento</h3>
+<p class="text-gray-600 mb-3">Reflexionar sobre las experiencias profesionales y personales para entender mejor las propias reacciones, estilos de trabajo y oportunidades de crecimiento.</p>
+</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Largo Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Ambición </h3>
+<p class="text-gray-600 mb-3"> Mantener una visión amplia y motivadora que impulse la búsqueda de la excelencia profesional, la estabilidad financiera y la contribución significativa al ámbito tecnológico y social. </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Organización</h3>
+<p class="text-gray-600 mb-3">Diseñar metas financieras y de desarrollo personal con revisiones periódicas para ajustar acciones, mantener el rumbo y asegurar el cumplimiento de los objetivos mayores.
+
+
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Innovación</h3>
+<p class="text-gray-600 mb-3">Impulsar proyectos innovadores que generen impacto significativo en el entorno laboral y social, contribuyendo al avance tecnológico y la creación de valor sostenible.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Estrategias</h1>
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">Para alcanzar mis metas</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Corto Plazo
+</h2>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3"> Establecer horarios personales y laborales para medir y dar tiempo a todo en su momento</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Iniciar un horario de estudio para ir tomando tiempos de aprendizaje sin aplicar mucho estres
+</p>
+</div>
+
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Mediano Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Poder aprovechar todo rescurso que tenga al alcance y aplicarlo para mejorar mi experiencia y conocmiento en la tecnologia </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Participar en proyectos de comunidades tecnologicas
+</p>
+</div>
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Participar en proyectos que se puedan realizar tanto en la universidad como fuera de ella.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Largo Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3"> Establecer metas economicas, como ahorros o metas de ingreso personal </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Elobrar proyectos propios con mejor alcance tecnologico.
+
+
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2">Innovación</h3>
+<p class="text-gray-600 mb-3">Impulsar proyectos innovadores que generen impacto significativo en el entorno laboral y social, contribuyendo al avance tecnológico y la creación de valor sostenible.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">Para vencer los obstaculos</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Corto Plazo
+</h2>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3"> Realizar una plafinicaion de recursos, horarios y tiempos para emplear al estudio y a la practica tecnologica</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Mejorar las rutinas y emplear nuevas herramientas para un mejor uso y manejo de estas mismas
+</p>
+</div>
+
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Mediano Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Asistir a conferencias tecnologicas mas especializadas dentro del entorno informatico </p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Crear metodos para emplear y mejorar los medios de comunicacion 
+</p>
+</div>
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Retroalimentarme y tomar como base mis errores y emplear nuevas soluciones .</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Largo Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">  Dividir mi objetivo a largo plazo en metas más pequeñas y alcanzables. Permitiendome mantener la motivación, medir el progreso y reajustar cuando surjan obstáculos</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Aprender de personas con más experiencia me permite anticipar dificultades, recibir orientación práctica y mantenerte enfocado cuando me enfrentes a desafíos complejos.
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">Para vencer los problemas</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Corto Plazo
+</h2>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3"> Llevar un registro de errores y aciertos diarios reflexionando rápidamente y ajustar conductas de forma ágil.</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Aplicar técnicas de manejo emocional (respiración, pausas activas) mejorando mi concentración frente a momentos de tensión o bloqueos.
+</p>
+</div>
+
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Mediano Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Desarrollar la capacidad de adaptación al cambio siendo flexible ante nuevas herramientas, metodologías o entornos laborales.</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Adoptar el aprendizaje continuo
+→ Inscribirse en cursos, participar en seminarios y mantenerse actualizado para estar preparado ante los cambios del entorno.
+</p>
+</div>
+<div class="bg-gray-50 p-3 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Crear un portafolio de proyectos personales
+reforzando la motivación, mejora la práctica y abre puertas frente a obstáculos laborales. .</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm p-6">
+<h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full mr-2">
+<i class="ri-tools-line text-primary"></i>
+</div>
+Largo Plazo
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">  Definir una visión clara con propósito
+ manteniendome firme ante grandes obstáculos y tomar decisiones con rumbo.</p>
+
+<div class="flex justify-between mt-1 text-xs text-gray-500">
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p class="text-gray-600 mb-3">Tener un plan financiero personal
+manejando imprevistos económicos y seguir avanzando sin comprometer tus metas..
+</p>
+</div>
+<div class="bg-gray-50 p-4 rounded">
+<h3 class="font-medium text-gray-800 mb-2"></h3>
+<p>Adoptar una mentalidad de innovación continua
+superando problemas estructurales con ideas originales y soluciones diferentes al promedio</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</section>
+<!-- Metas Profesionales ---------------------------------------->
+<section id="metas" class="section">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Cronograma</h1>
+<div class="grid grid-cols-1 md:grid-cols-1 gap-3 mb-12">
+
+
+ <title>Tabla en mi página web</title>
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      text-align:center;
+    }
+    th, td {
+      border: 0px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #;
+      color: Black;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>     Actividades    </th>
+        <th>Corto Plazo</th>
+        <th>Mediano Plazo</th>
+        <th>Largo Plazo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Aprobar mi 1er semestre</td><td>Jul 12</td><td></td><td></td></tr>
+
+      <tr><td>2</td><td>Mejorar mis habilidades y conocimientos en la programacion</td><td>Agost 12</td><td></td><td></td></tr>
+
+      <tr><td>3</td><td>Participar en proyectos y unimer a comunidades en el area de tecnologia</td><td>Nov 11</td><td></td><td></td></tr>
+
+      <tr><td>4</td><td>Iniciar con la creacion y desarrollo de mis propios proyectos</td><td></td><td>Mar 12</td><td></td></tr>
+
+      <tr><td>5</td><td>Crear un plan de gestion de mi tiempo y un plan economico</td><td></td><td>Abr 12</td><td></td></tr>
+      <tr><td>6</td><td>Tener empleos con un buen salario </td><td></td><td></td><td>May 01</td></tr>
+      <tr><td>7</td><td>Alcanzar buena estabilidad economica </td><td></td><td></td><td>Agost 20</td></tr>
+      <tr><td>8</td><td>Iniciar un plan de negocios, evaluar metodos y plaficar proceso del mismo </td><td></td><td></td><td>Dic 01</td></tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+<br><br>
+
+<div class="bg-white rounded-md shadow-md p-6 max-w-20xl00 mx-500 mb-8">
+<h2 class="text-xl font-semibold text-gray-800 mb-4"></h2>
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Evaluación del proyecto (Mis avances)</h1>
+<div class="bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-20 text-white max-w-10xl5 mx-300">
+
+<h2 class="text-xl font-semibold mb-5">Evaluacion del Proyecto (Mis avances)</h2>
+
+<p class="mb-4">"He logrado poder expandir mis conocimientos, ideas y habilidades sobre programacion y programas ."</p>
+
+<p class="mb-4">"He conocido personas que me han apoyado a expandir mis conocimientos,ideas y parte de la experiencia que ahora tengo en la practica ."</p>
+
+<p class="mb-4">"He meojorado en mi disciplina y tengo mas enfoque en mis estudios."</p>
+
+<p class="mb-4">"Empece un plan de ahorro y financiero para poder tener recursos cuando comience a implementar proyectos."</p>
+
+<p class="mb-4">"Comence con mi planificacion de metas y objetivos de los cuales quiero lograr de manera solida y correcta."</p>
+
+<p class="mb-4">"He conocido personas que me han apoyado a expandir mis conocimientos,ideas y parte de la experiencia que ahora tengo en la practica ."</p>
+
+<p class="mb-4">"He conseguido recursos que me apoyan en seguir complentado mis estudios."</p>
+
+
+</div>
+</section>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-gray-900 text-white mt-12">
+<div class="container mx-auto px-4 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<div class="font-['Pacifico'] text-2xl text-white mb-2"><img src="https://st.mextudia.com/wp-content/uploads/2020/03/que-es-proyecto-de-vida-de-un-estudiante.jpg" width="150" height="100"></div>
+<p class="text-gray-400 text-sm">Mi camino hacia la excelencia personal y profesional</p>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-mail-fill"></i>
+</a>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400 text-sm">
+
+</div>
+</div>
+</footer>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.nav-item');
+const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+function showSection(sectionId) {
+sections.forEach(section => {
+if (section.id === sectionId) {
+section.classList.add('active');
+} else {
+section.classList.remove('active');
+}
+});
+navItems.forEach(item => {
+if (item.dataset.section === sectionId) {
+item.classList.add('active');
+} else {
+item.classList.remove('active');
+}
+});
+mobileNavItems.forEach(item => {
+if (item.dataset.section === sectionId) {
+item.classList.add('active');
+} else {
+item.classList.remove('active');
+}
+});
+}
+navItems.forEach(item => {
+item.addEventListener('click', function() {
+showSection(this.dataset.section);
+});
+});
+mobileNavItems.forEach(item => {
+item.addEventListener('click', function() {
+showSection(this.dataset.section);
+document.getElementById('mobile-menu').classList.add('hidden');
+});
+});
+});
+</script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+menuToggle.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
